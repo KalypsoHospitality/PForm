@@ -6,9 +6,9 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Enable CORS for your frontend domain
+// Enable CORS for your frontend domain (https://pform.onrender.com)
 const corsOptions = {
-    origin: '*',
+    origin: '*', // Set this to your frontend domain
     methods: 'POST',
 };
 
