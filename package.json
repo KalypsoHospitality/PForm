@@ -1,0 +1,17 @@
+{
+  "name": "kalypso-hospitality-server",
+  "version": "1.0.0",
+  "description": "Node.js server for handling form submissions",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "KalypsoHospitality",
+  "license": "UNLICENSED"
+}
