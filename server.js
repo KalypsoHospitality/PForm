@@ -16,7 +16,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Handle form submission
-app.post('/submit', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
         // Extract form data
         const formData = req.body;
