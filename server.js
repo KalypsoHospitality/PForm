@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Import the CORS middleware
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,7 +12,7 @@ const corsOptions = {
     methods: 'POST',
 };
 
-app.use(cors(corsOptions)); // Use CORS middleware with specified options
+app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Handle form submission
@@ -21,8 +21,17 @@ app.post('/submit', async (req, res) => {
         // Extract form data
         const formData = req.body;
 
+        // Set the correct Formspree endpoint
+        const formSpreeEndpoint = 'https://formspree.io/f/maygavao'; // Replace with your Formspree endpoint
+
+        // Set headers for the Formspree request
+        const headers = {
+            'Content-Type': 'application/json',
+            // Add any other headers required by Formspree, e.g., Authorization header
+        };
+
         // Forward data to Formspree
-        const formSpreeResponse = await axios.post('https://formspree.io/f/maygavao', formData);
+        const formSpreeResponse = await axios.post(formSpreeEndpoint, formData, { headers });
 
         // Handle Formspree response if needed
 
