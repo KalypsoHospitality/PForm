@@ -22,7 +22,7 @@ app.post('/', async (req, res) => {
         const formData = req.body;
 
         // Set the correct Formspree endpoint
-        const formSpreeEndpoint = 'https://formspree.io/f/maygavao'; // Replace with your Formspree endpoint
+        const formSpreeEndpoint = 'https://formspree.io/f/mknlkayg'; // Replace with your Formspree endpoint
 
         // Set headers for the Formspree request
         const headers = {
