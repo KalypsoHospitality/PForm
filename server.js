@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS for your frontend domain
 const corsOptions = {
-    origin: 'https://www.kalypsohospitality.com',
+    origin: '*',
     methods: 'POST',
 };
 
